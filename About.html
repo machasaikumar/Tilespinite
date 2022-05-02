@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var wow = new WOW({
+            boxClass: 'wow', // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 0, // distance to the element when triggering the animation (default is 0)
+            mobile: true, // trigger animations on mobile devices (default is true)
+            live: true, // act on asynchronously loaded content (default is true)
+            callback: function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null, // optional scroll container selector, otherwise use window,
+            resetAnimation: true, // reset animation on end (default is true)
+        });
+        wow.init();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<style>
+    .b1 {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .img1 {
+        border-radius: 10px;
+        height: 50px;
+        margin-left: 20px;
+    }
+    
+    .img2 {
+        width: 1300px;
+        height: 750px;
+    }
+    
+    .nt1:hover {
+        color: rgb(49, 29, 223);
+    }
+    
+    .fa {
+        padding: 5px;
+        letter-spacing: 5px;
+        font-size: 18px;
+        color: aliceblue;
+    }
+    
+    .j1 {
+        background-color: rgba(0, 0, 0, 0.829);
+    }
+    
+    .f1 {
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+    }
+    
+    .ft {
+        color: rgb(201, 192, 192);
+    }
+    
+    .ft:hover {
+        color: rgb(163, 141, 141);
+    }
+    
+    .cp {
+        font-family: 'Times New Roman', Times, serif;
+        color: whitesmoke;
+    }
+    
+    .fa1 {
+        color: rgb(163, 141, 141);
+    }
+    
+    .fa1:hover {
+        color: rgb(231, 109, 39);
+    }
+    /*for text overlay*/
+    
+    .image {
+        position: relative;
+        width: 400px;
+    }
+    
+    .image__img {
+        display: block;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .image__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+    
+    .image__overlay:hover {
+        opacity: 1;
+    }
+    
+    .image__overlay>* {
+        transform: translateY(20px);
+        transition: transform 0.25s;
+    }
+    
+    .image__title {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    
+    .image__description {
+        font-size: 1.25em;
+        margin-top: 0.25em;
+    }
+    
+    .image__overlay:hover>* {
+        transform: translateY(0);
+    }
+    
+    .image__overlay__blur {
+        backdrop-filter: blur(5px);
+    }
+    /*for css animation*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .body2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 600PX;
+        background: #000;
+        margin-top: 0%;
+    }
+    
+    .box {
+        position: relative;
+        width: 250px;
+        height: 150px;
+        transform-style: preserve-3d;
+        animation: animate 20s linear infinite;
+    }
+    
+    @keyframes animate {
+        0% {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        100% {
+            transform: perspective(1000px) rotateY(360deg);
+        }
+    }
+    
+    .box span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) *45deg)) translateZ(400px);
+        -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+    }
+    
+    .box span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<body class="b1">
+    <nav class="navbar navbar-expand-md bg-dark sticky-top navbar-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a href="">
+            <img class="img1 wow zoomIn" src="medha.jpg">
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" style="color:white" href="home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nt1" style="color:white" href="About.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nt1" style="color:white" href="service.html">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nt1" style="color:white" href="#">OUR WORK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nt1" style="color:white" href="#">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mx-5 ml-auto">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-whatsapp"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <center>
+            <h3>ABOUT US</h3>
+        </center><br><br>
+        <div class="row">
+            <div class="col image">
+                <img class="image__img" src="https://catalog.wlimg.com/1/3313400/other-images/382474.jpg">
+                <div class="image__overlay">
+                    <div class="image__title">Tiles</div>
+                    <p class="image__description">
+                        Parking & Exterior Floor
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col image">
+                <img class="image__img" src="https://5.imimg.com/data5/FW/YS/MY-25224397/cement-parking-tile-500x500.jpg">
+                <div class="image__overlay">
+                    <div class="image__title">Tiles</div>
+                    <p class="image__description">
+                        Parking & Exterior Floor
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col image">
+                <img class="image__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSHbrp08fl7U9JlKJOFpL2FGfFZ2lY9ib-w&usqp=CAU">
+                <div class="image__overlay">
+                    <div class="image__title">Tiles</div>
+                    <p class="image__description">
+                        Parking & Exterior Floor
+
+                    </p>
+                </div>
+            </div>
+        </div><br><br>
+
+
+        <div class="row">
+            <div class="col image">
+                <img class="image__img" src="https://5.imimg.com/data5/SELLER/Default/2020/12/TC/JL/BM/78856509/interlocking-pavers-tiles-500x500.jpeg">
+                <div class="image__overlay">
+                    <div class="image__title">Tiles</div>
+                    <p class="image__description">
+                        Parking & Exterior Floor
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col image">
+                <img class="image__img" src="https://cdn.citymapia.com/assets/Business/266/GalleryImage/3763/266_636905468051870433.jpg?rendered=true&width=1200">
+                <div class="image__overlay">
+                    <div class="image__title">Tiles</div>
+                    <p class="image__description">
+                        Parking & Exterior Floor
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col image">
+                <img class="image__img" src="https://5.imimg.com/data5/EG/FX/MY-14471694/heavy-duty-flooring-tiles-250x250.jpg">
+                <div class="image__overlay">
+                    <div class="image__title">Tiles</div>
+                    <p class="image__description">
+                        Parking & Exterior Floor
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="body2">
+
+        <div class="box">
+            <span style="--i:1;"><img class="imgsr" src="https://image.shutterstock.com/image-photo/granite-outdoor-floor-tile-diagonal-260nw-1248469144.jpg"></span>
+            <span style="--i:2;"><img class="imgsr" src="https://img.edilportale.com/product-thumbs/b_P-AN-SP-Outdoor-floor-tiles-PI-MAR-473082-rel8bcd7e0b.jpg"></span>
+            <span style="--i:3;"><img class="imgsr" src="https://media.istockphoto.com/photos/outdoor-tiles-ornament-picture-id647848942"></span>
+            <span style="--i:4;"><img class="imgsr" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZcmY7RJc7U2luMlD53oBDUivzfP60XvYBsUJzV3HiW5J7FWBzg_3iNIJW2RFboWyFupg&usqp=CAU"></span>
+            <span style="--i:5;"><img class="imgsr" src="https://stylesatlife.com/wp-content/uploads/2019/10/outdoor-floor-tiles-design.jpg"></span>
+            <span style="--i:6;"><img class="imgsr" src="https://media.istockphoto.com/photos/outdoor-stone-block-tile-floor-background-and-texture-pattern-picture-id664074956"></span>
+            <span style="--i:7;"><img class="imgsr" src="https://img.freepik.com/free-photo/outdoor-stone-block-tile-floor-texture_42682-379.jpg"></span>
+            <span style="--i:8;"><img class="imgsr" src="https://www.aglasiangranito.com/media/imagegallery/Parking-Tiles-gallery-img-2021-02-23-10-58-55.jpg"></span>
+
+        </div>
+    </div>
+
+    <div class="jumbotron j1">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col">
+                    <h4 class="f1">ABOUT US</h4>
+                    <p><a href="" class="ft">Parking And Exterior Floor</a></p>
+                    <h4 class="f1">SIZE</h4>
+                    <P><a href="" class="ft">Small</a></P>
+                    <p><a href="" class="ft">Medium</a></p>
+                    <p><a href="" class="ft">Large</a></p>
+
+                </div>
+
+
+                <div class="col">
+                    <h4 class="f1">CALL US</h4>
+                    <P><a href="" class="ft"><i class="fa fa-phone"></i>1800-210-7484</a></P>
+                    <P><a href="" class="ft"><i class="fa fa-phone"></i>1800-22-7484</a></P>
+
+                </div>
+
+                <div class="col">
+                    <h4 class="f1">CONTACT US</h4>
+                    <a href="" class="ft"><i class="fa fa-facebook"></i></a>
+                    <a href="" class="ft"><i class="fa fa-instagram"></i></a>
+                    <a href="" class="ft"><i class="fa fa-twitter"></i></a>
+                    <a href="" class="ft"><i class="fa fa-youtube"></i></a>
+                </div>
+
+            </div>
+            <hr>
+            <div class="">
+                <h5 class="cp">
+                    <center>@ Copyright 2022. Medha Parking Tiles Developed by <b><a href="https://piniteinfo.com/" class="fa1">https://piniteinfo.com/</a></b></center>
+                </h5>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

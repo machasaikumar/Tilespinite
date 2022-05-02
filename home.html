@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var wow = new WOW({
+            boxClass: 'wow', // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 0, // distance to the element when triggering the animation (default is 0)
+            mobile: true, // trigger animations on mobile devices (default is true)
+            live: true, // act on asynchronously loaded content (default is true)
+            callback: function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null, // optional scroll container selector, otherwise use window,
+            resetAnimation: true, // reset animation on end (default is true)
+        });
+        wow.init();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<style>
+    .b1 {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .img1 {
+        border-radius: 10px;
+        height: 50px;
+        margin-left: 20px;
+    }
+    
+    .img2 {
+        width: 1300px;
+        height: 750px;
+    }
+    
+    .nt1:hover {
+        color: rgb(49, 29, 223);
+    }
+    
+    .fa {
+        padding: 5px;
+        letter-spacing: 5px;
+        font-size: 18px;
+        color: aliceblue;
+    }
+    
+    .carousel-caption {
+        justify-content: center;
+        padding-bottom: 250px;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0);
+        height: 60px;
+    }
+    
+    .tt1 {
+        font-size: 35px;
+        color: rgb(255, 255, 255);
+        text-shadow: rgba(0, 0, 0, 0.651);
+    }
+    
+    .bb1 {
+        border-color: azure;
+        background-color: aliceblue;
+        text-decoration: dashed;
+        animation-direction: alternate;
+    }
+    
+    .card-img-top {
+        height: 200px;
+        padding: 10px;
+    }
+    
+    .card-img-top:hover {
+        transform: scale(1.2)
+    }
+    
+    .card-img-top {
+        transition-duration: 0.75s;
+    }
+    
+    .card {
+        overflow: hidden;
+    }
+    
+    .card {
+        border-radius: 10px;
+        max-width: 350px;
+        margin: 25px;
+    }
+    
+    .img31 {
+        width: 400px;
+        height: 250px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        margin-left: 90px;
+    }
+    
+    .img31:hover {
+        transform: scaleX(1.2);
+    }
+    
+    .img31 {
+        transition-duration: 0.75s;
+    }
+    
+    .img32 {
+        width: 400px;
+        height: 250px;
+        margin-top: 30px;
+    }
+    
+    .img32:hover {
+        transform: scaleY(1.2);
+    }
+    
+    .img32 {
+        transition-duration: 0.75s;
+    }
+    
+    .hh1 {
+        margin-top: 30px;
+        text-align: left;
+        padding-right: 5px;
+        text-align: justify;
+    }
+    
+    .hh2 {
+        margin-top: 30px;
+        text-align: justify;
+        padding-left: 100px;
+    }
+    
+    .j1 {
+        background-color: rgba(0, 0, 0, 0.829);
+    }
+    
+    .f1 {
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+    }
+    
+    .ft {
+        color: rgb(201, 192, 192);
+    }
+    
+    .ft:hover {
+        color: rgb(163, 141, 141);
+    }
+    
+    .cp {
+        font-family: 'Times New Roman', Times, serif;
+        color: whitesmoke;
+    }
+    
+    .fa1 {
+        color: rgb(163, 141, 141);
+    }
+    
+    .fa1:hover {
+        color: rgb(231, 109, 39);
+    }
+</style>
+
+<body class="b1">
+    <nav class="navbar navbar-expand-md bg-dark sticky-top navbar-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a href="">
+            <img class="img1 wow zoomIn" src="medha.jpg">
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" style="color:white" href="home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nt1" style="color:white" href="About.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nt1" style="color:white" href="service.html">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nt1" style="color:white" href="#">OUR WORK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nt1" style="color:white" href="#">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mx-5 ml-auto">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-whatsapp"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+
+        </div>
+    </nav>
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="img2 wow zoomInDown" src="https://www.enduratiles.com/images/gallery/park/park-big-2.jpg" alt="Los Angeles">
+                <div class="carousel-caption">
+                    <h5 class="tt1 animated bounceInRight" style="animation-delay:1s">THE ULTIMATE FLOORING SERVICES</h5>
+                    <p class="pp1 animated zoomInDown" style="animation-delay:2s">Floor Installation,Refinshing</p>
+                    <a href="" class="bb1 btn btn-outline-dark animated zoomInDown" style="animation-delay:2s">view Details</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="img2 wow rotateIn" src="https://5.imimg.com/data5/SELLER/Default/2021/5/SB/WN/IO/61950836/e102wp-x191-parking-floor-tiles-500x500.jpg" alt="Chicago">
+                <div class="carousel-caption">
+                    <h3 class="tt1 animated bounceInRight" style="animation-delay:1s;">COMMERCIAL AND RESIDENTIAL</h3>
+                    <p class="pp1 animated bounceInRight" style="animation-delay:1s;">Flooring Specialists</p>
+                    <a href="" class="bb1 btn btn-outline-dark animated zoomInDown" style="animation-delay:2s">view Details</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="img2 wow jackInTheBox" src="https://lh3.googleusercontent.com/p/AF1QipPZK2P9a-3pTv7jtwCZDcISiXyIMNIkaMQu9lTb=w1080-h608-p-no-v0" alt="New York">
+                <div class="carousel-caption">
+                    <h3 class="tt1 animated bounceInRight" style="animation-delay:1s;">For Quality Services</h3>
+
+                    <a href="" class="bb1 btn btn-outline-dark animated zoomInDown" style="animation-delay:2s">view Details</a>
+                </div>
+            </div>
+        </div>
+
+
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+    <div class="jumbotron">
+
+        <h2 class="animated rotateIn">
+            <center> —COVERING WALL TO WALL — </center>
+        </h2>
+        <div class="row">
+            <div class="col-sm-4 card c1">
+                <img class="card-img-top wow zoomIn" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL8-K2uzuww-JfZE6diPqQPjM152S8szxFjA&usqp=CAU" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">GRUNGE FLOOR TILES</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-sm-4 card c2">
+                <img src="https://cpimg.tistatic.com/03645794/b/4/Parking-Tiles.jpg" class="card-img-top wow zoomIn">
+                <div class="card-body">
+                    <h4 class="card-title">STYLISH CERAMIC TILES</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo</p>
+                    <a href="" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-sm-4 card c3">
+                <img class="card-img-top wow zoomIn" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVNsh6-aE_JvwiKdZWU2vy2dJqPmxI4HzkLw&usqp=CAU" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">WALL TO WALL CARPETING</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscingec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+
+
+        <h2 class="t1">
+            <center> —COVERING WALL TO WALL — </center>
+        </h2>
+        <div class="row">
+            <div class="col col-xl-6 ">
+                <img class="img31" src="https://i.pinimg.com/originals/a6/9f/e5/a69fe59dc6ef0bc75fdcc8a200daf4e5.jpg" alt="Card image">
+            </div>
+            <div class="col hh1 col-xl-6">
+                <h4 class="h1">GRUNGE FLOOR TILES</h4>
+                <p class="p1">Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                    Ut elit tellus, luctus nec ullamcorper mattis, pulvinarLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo dapibus leo</p>
+                <a href="#" class="b1 btn btn-primary">Read More</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col hh2 col-xl-6">
+                <h4 class="h2">GRUNGE FLOOR TILES</h4>
+                <p class="p2">Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+                    sum dolorr mattis, pulvinar dapibus leoadipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <a href="#" class="b2 btn btn-primary">Read More</a>
+            </div>
+            <div class="col col-xl-6 ">
+                <img class="img32" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHnSBQwo7ZXYfE-JqTWNuZevLBm2NR5UdjL9FTQ8RKjnYrMWMdSTfmjEEsedYJlxVVUcY&usqp=CAU" alt="Card image">
+            </div>
+
+        </div><br><br>
+
+
+
+
+
+
+
+    </div>
+
+    <div class="jumbotron j1">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col">
+                    <h4 class="f1">ABOUT US</h4>
+                    <p><a href="" class="ft">Parking And Exterior Floor</a></p>
+                    <h4 class="f1">SIZE</h4>
+                    <P><a href="" class="ft">Small</a></P>
+                    <p><a href="" class="ft">Medium</a></p>
+                    <p><a href="" class="ft">Large</a></p>
+
+                </div>
+
+
+                <div class="col">
+                    <h4 class="f1">CALL US</h4>
+                    <P><a href="" class="ft"><i class="fa fa-phone"></i>1800-210-7484</a></P>
+                    <P><a href="" class="ft"><i class="fa fa-phone"></i>1800-22-7484</a></P>
+
+                </div>
+
+                <div class="col">
+                    <h4 class="f1">CONTACT US</h4>
+                    <a href="" class="ft"><i class="fa fa-facebook"></i></a>
+                    <a href="" class="ft"><i class="fa fa-instagram"></i></a>
+                    <a href="" class="ft"><i class="fa fa-twitter"></i></a>
+                    <a href="" class="ft"><i class="fa fa-youtube"></i></a>
+                </div>
+
+            </div>
+            <hr>
+            <div class="">
+                <h5 class="cp">
+                    <center>@ Copyright 2022. Medha Parking Tiles Developed by <b><a href="https://piniteinfo.com/" class="fa1">https://piniteinfo.com/</a></b></center>
+                </h5>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
